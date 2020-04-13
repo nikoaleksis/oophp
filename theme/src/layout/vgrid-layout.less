@@ -1,0 +1,211 @@
+/**
+* Layout style for general structure of header, navbar, main, footer
+* and other regions of the page including route specific styles implementing
+* vertical grid.
+*/
+
+/**
+* Variables
+*/
+
+/**
+* General layout
+*/
+
+// Default grid, change to fit your requirements.
+@columnWidth:   30;
+@gutterWidth:   10;
+@columns:       24;
+@gridType:      "float"; // "flex"
+
+
+.row {
+    #desinax-vgrid.row();
+    // background-color: #0f0;
+    margin-bottom: 12px;
+}
+
+//Show the vertical grid
+.vgrid .inner-wrap {
+    @gridImage: "../img/grid_24x30x10-nomargin.png";
+    #desinax-vgrid.showGrid(@gridImage, 1100px);
+
+    &.inner-wrap-header,
+    &.inner-wrap-footer {
+        #desinax-vgrid.showGrid(@gridImage);
+    }
+}
+
+// Show the grid
+.hgrid .inner-wrap {
+    @gridImage: "../img/magic-number-@{magicNumber}.png";
+    #desinax-hgrid.showGrid(@gridImage);
+}
+
+/**
+* Main, flash and sidebars layout
+*/
+
+
+.inner-wrap {
+    #desinax-vgrid.grid(1100px);
+}
+
+.inner-wrap-flash {
+
+    .region-flash {
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+.stylechooser {
+}
+
+.region-main {
+    #desinax-vgrid.column(@columns * 3 / 4);
+    #desinax-vgrid.push(2);
+
+    .article {
+        .figure.right {
+            #desinax-vgrid.column(@columns * 1 / 2);
+            float: right;
+            figcaption {
+                font-size: small;
+                font-style: italic;
+            }
+        }
+    }
+
+    &.has-sidebar {
+        #desinax-vgrid.push(0);
+
+        .next-previous {
+            a {
+                color: @colorBody;
+            }
+        }
+    }
+
+    &.has-sidebar-right {
+        #desinax-vgrid.column(@columns * 3 / 4 - 1);
+    }
+
+
+    &.has-sidebar-left.has-sidebar-right,
+    &.has-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns - 10);
+    }
+}
+
+.outer-wrap-breadcrumb {
+    display: none;
+}
+
+
+
+.region-sidebar-left,
+.region-sidebar-right {
+    #desinax-vgrid.column(@columns * 1 / 4);
+
+    .block.toc,
+    .blog-toc {
+
+        h4 {
+            text-align: center;
+        }
+
+        .toc {
+            list-style-type: none;
+
+        }
+
+        li {
+            background-color: @headerBgColor;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 0.5em;
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: @headerColor;
+            }
+        }
+    }
+}
+
+.region-sidebar-right {
+    #desinax-vgrid.push(1);
+}
+
+.region-sidebar-left.has-sidebar-right,
+.region-sidebar-right.has-sidebar-left {
+    #desinax-vgrid.column(@columns * 1 / 4 - 1);
+}
+
+/* After main layout */
+
+/* Byline */
+
+.block.author-byline {
+    #desinax-vgrid.column(@columns * 2 / 3);
+    #desinax-vgrid.push(3);
+    border: 1px solid @colorH1BorderBottom;
+
+    .author-byline {
+        display: inline-flex;
+        flex-flow: row;
+        img {
+            margin-right: 1em;
+        }
+
+        p {
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .region-main {
+        #desinax-vgrid.column(@columns);
+        #desinax-vgrid.push(0);
+
+        &.has-sidebar-left.has-sidebar-right,
+        &.has-sidebar-right.has-sidebar-left {
+            #desinax-vgrid.column(@columns);
+        }
+    }
+
+    .region-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-left.has-sidebar-right,
+    .region-sidebar-right.has-sidebar-left {
+        #desinax-vgrid.column(@columns);
+    }
+
+
+}
+
+@media screen and (max-width: 850px) {
+    .region-main.has-sidebar-right {
+        #desinax-vgrid.column(@columns);
+    }
+
+    .region-sidebar-right {
+        #desinax-vgrid.push(0);
+        #desinax-vgrid.column(@columns);
+    }
+}
+
+/*
+*Byline
+*/
+
+@media screen and (max-width: 680px) {
+
+    .block.author-byline {
+        #desinax-vgrid.column(@columns);
+        #desinax-vgrid.push(0);
+    }
+}

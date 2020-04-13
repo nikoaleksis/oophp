@@ -1,3 +1,3 @@
-#### Footer col 1
+#### Om kursen
 
-Med brödtext i ett stycke som säger något trevligt om just detta block, eller kanske en lista av länkar.
+Kursen heter Objektorienterade Webbteknologier och går på Blekinge Tekniska Högskola. Denna kurs ingår i kurspaketet Webbprogrammering och Databaser som jag läser på distans.

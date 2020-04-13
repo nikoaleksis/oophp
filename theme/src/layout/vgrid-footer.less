@@ -1,0 +1,39 @@
+/**
+ * Layout style for footer implementing vertical grid
+ */
+
+/**
+ * Variables
+ */
+@footerBgColor: #504949;
+@footerColor: #fff;
+
+/* Footer */
+
+.outer-wrap-footer {
+    background-color: @footerBgColor;
+    color: @footerColor;
+}
+
+.inner-wrap-footer {
+    #desinax-vgrid.grid(100%);
+    .row {
+        max-width: 100%;
+    }
+}
+
+.region-footer {
+    a {
+        color: @footerColor;
+    }
+}
+
+.footer-column {
+    #desinax-vgrid.column(@columns / 3);
+}
+
+.site-footer {
+    #desinax-vgrid.column(@columns);
+    text-align: center;
+    // padding-bottom: 24px;
+}
