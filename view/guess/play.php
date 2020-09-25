@@ -16,7 +16,8 @@ namespace Anax\View;
 
 <form class="number-guess" method="post">
     <input type="number" name="guess">
-    <input type="<?= $_SESSION["game"]->tries() > 0 ? "submit" : "hidden" ?>" name=<?= $_SESSION["game"]->tries() != 0 ? "doGuess" : "" ?> value="Make a guess">
+    <input type="<?= $_SESSION["game"]->tries() > 0 ? "submit" : "hidden" ?>"
+        name=<?= $_SESSION["game"]->tries() != 0 ? "doGuess" : "" ?> value="Make a guess">
     <input type="submit" name="doInit" value="Start from beginning">
     <input type="submit" name="doCheat" value="Cheat">
 </form>

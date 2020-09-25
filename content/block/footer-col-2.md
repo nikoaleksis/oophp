@@ -1,3 +1,3 @@
 #### Github
 
-Länk till [min guthub](https://github.com/nikoaleksis).
+Länk till [min github](https://github.com/nikoaleksis).

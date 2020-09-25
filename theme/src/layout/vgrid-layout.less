@@ -95,12 +95,43 @@
     &.has-sidebar-right.has-sidebar-left {
         #desinax-vgrid.column(@columns - 10);
     }
-}
 
-.outer-wrap-breadcrumb {
-    display: none;
-}
+    .outer-wrap-breadcrumb {
+        display: none;
+    }
 
+    .dice-game {
+
+        .game-scoreboard {
+            margin: 0 auto;
+            text-align: center;
+            padding: 1em;
+
+            td {
+                border: solid 2px @colorBody;
+            }
+
+            .selected {
+                background-color: #02f;
+            }
+        }
+    }
+
+    .game-form {
+        display: flex;
+        flex-direction: column;
+        width: 10em;
+        margin: 0 auto;
+
+        input {
+            margin: 0.5em;
+        }
+    }
+
+    .send-score {
+        text-align: center;
+    }
+}
 
 
 .region-sidebar-left,

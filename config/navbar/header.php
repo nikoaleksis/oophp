@@ -60,8 +60,13 @@ return [
         ],
         [
             "text" => "Guessing Game",
-            "url" => "game",
+            "url" => "game/guess",
             "title" => "Spela gissa numret",
+        ],
+        [
+            "text" => "Dice Game",
+            "url" => "game/dice",
+            "title" => "Spela tärningsspelet",
         ],
     ],
 ];

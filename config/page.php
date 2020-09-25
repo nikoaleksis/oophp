@@ -20,7 +20,7 @@ return [
             "lang" => "sv",
             "stylesheets" => [
                 // Change here to set another default stylesheet
-                "css/main.min.css",
+                "css/style.css",
                 //"css/another.min.css",
             ],
             "javascripts" => [

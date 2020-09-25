@@ -32,7 +32,7 @@
     "@desinax/responsive-menu": "^1.1.4",
     "@desinax/typographic-grid": "^1.1.1",
     "@desinax/vertical-grid": "^1.0.3",
-    "@fortawesome/fontawesome-free": "^5.11.2",
+    "@fortawesome/fontawesome-free": "^5.14.0",
     "normalize.css": "^8.0.1"
   },
   "devDependencies": {
