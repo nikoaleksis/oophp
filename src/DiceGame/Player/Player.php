@@ -14,7 +14,7 @@ class Player
      * @var int $amountOfDices The amount of dices the player has.
      * @var array $diceArray The array that holds the Dice objects.
      * @var array $lastThrow The array that holds the scores from the latest throw.
-     * @var array $throwHistory The array that holds all the scores.
+     * @var array $throwHistoryF The array that holds all the scores.
      * @var boolean $isCurrentPlayer Tells if it currently is the players turn to act.
      */
     private $name;

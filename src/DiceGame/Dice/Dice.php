@@ -28,6 +28,10 @@ class Dice
         $this->value = rand(1, 6);
     }
 
+    /**
+     * Get the current value of the dice;
+     * @return int $this->value The value of the dice.
+     */
     public function getValue()
     {
         return $this->value;

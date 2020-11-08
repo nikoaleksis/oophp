@@ -71,6 +71,7 @@ namespace Anax\View;
         echo "</tr>";
         ?>
     </table>
+
     <form class="send-score" action="play" method="post">
         <input type="submit"
             name="<?= $currentPlayer->isAI() ? "simulate" : "throw" ?>"
@@ -81,4 +82,9 @@ namespace Anax\View;
         }
         ?>
     </form>
+    <div class="histogram">
+        <h3>Histogram</h3>
+        <p>Shows after the first round.</p>
+        <pre><?= $histogram->getAsTextLimited() ?></pre>
+    </div>
 </div>

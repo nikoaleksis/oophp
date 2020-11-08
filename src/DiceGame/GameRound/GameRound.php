@@ -2,9 +2,12 @@
 namespace Niko\DiceGame\GameRound;
 
 use \Niko\DiceGame\Player\Player;
+use \Niko\Interfaces\HistogramInterface;
+use \Niko\Traits\HistogramTrait;
 
-class GameRound
+class GameRound implements HistogramInterface
 {
+    use HistogramTrait;
 
     /**
      * Variables of the GameRound class.
@@ -12,6 +15,7 @@ class GameRound
      * @var int $amountOfDices The amount of dices in a game round.
      * @var int $amountOfAI The amount of AI (Bots) in a game round.
      * @var array $playerArray The array holding the players.
+     * @var array $gameRoundHistory The array holding the history of the game round.
      * @var int $currentPlayerTurn The player turn counter, defaults to 0.
      * @var int $currentRound The round counter, defaults to 0.
      * @var int MAX_SCORE The score when a game will end.
@@ -60,20 +64,20 @@ class GameRound
     }
 
     /**
-     * Method for initiating a player to roll its dices.
-     * @param string $playerName The name of the player.
-     * @return void
-     */
+    * Method for initiating a player to roll its dices.
+    * @param string $playerName The name of the player.
+    * @return void
+    */
     public function rollDices(string $playerName)
     {
         foreach ($this->playerArray as $player) {
             if ($playerName === $player->getName()) {
                 $player->rollDice();
-
-                break;
             }
+            break;
         }
     }
+
 
     /**
      * Getter method for fetching the max score.
@@ -111,6 +115,10 @@ class GameRound
     public function resetPlayerLastThrowHistory()
     {
         foreach ($this->playerArray as $player) {
+            foreach ($player->getLastThrow() as $value) {
+                $this->sequence[] = $value;
+            }
+
             $player->resetLastThrow();
         }
     }
