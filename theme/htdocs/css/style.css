@@ -5156,7 +5156,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Gelasio Regular'), local('Gelasio-Regular'), url(https://fonts.gstatic.com/s/gelasio/v2/cIf9MaFfvUQxTTqS9C6hZA.ttf) format('truetype');
+  src: local('Gelasio Regular'), local('Gelasio-Regular'), url(https://fonts.gstatic.com/s/gelasio/v3/cIf9MaFfvUQxTTqS9C6hZA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Kurale';
@@ -5191,14 +5191,14 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Girassol Regular'), local('Girassol-Regular'), url(https://fonts.gstatic.com/s/girassol/v2/JTUUjIo_-DK48laaNB9KxW4.ttf) format('truetype');
+  src: local('Girassol Regular'), local('Girassol-Regular'), url(https://fonts.gstatic.com/s/girassol/v3/JTUUjIo_-DK48laaNB9KxW4.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Big Shoulders Display';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Big Shoulders Display Regular'), local('BigShouldersDisplay-Regular'), url(https://fonts.gstatic.com/s/bigshouldersdisplay/v3/fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDr.ttf) format('truetype');
+  src: local('Big Shoulders Display Regular'), local('BigShouldersDisplay-Regular'), url(https://fonts.gstatic.com/s/bigshouldersdisplay/v4/fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDr.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Megrim';
@@ -6087,6 +6087,12 @@ body::after {
   position: fixed;
   z-index: -1;
   opacity: 0.5;
+}
+form {
+  margin: 3em;
+}
+table {
+  margin: 3em;
 }
 .outer-wrap-flash {
   opacity: 0.8;

@@ -30,6 +30,26 @@ return [
                         "url" => "redovisning/kmom02",
                         "title" => "Redovisning för kmom02.",
                     ],
+                    [
+                        "text" => "Kmom03",
+                        "url" => "redovisning/kmom03",
+                        "title" => "Redovisning för kmom03.",
+                    ],
+                    [
+                        "text" => "Kmom04",
+                        "url" => "redovisning/kmom04",
+                        "title" => "Redovisning för kmom04.",
+                    ],
+                    [
+                        "text" => "Kmom05",
+                        "url" => "redovisning/kmom05",
+                        "title" => "Redovisning för kmom05.",
+                    ],
+                    [
+                        "text" => "Kmom02",
+                        "url" => "redovisning/kmom02",
+                        "title" => "Redovisning för kmom06.",
+                    ],
                 ],
             ],
         ],
@@ -67,6 +87,40 @@ return [
             "text" => "Dice Game",
             "url" => "game/dice",
             "title" => "Spela tärningsspelet",
+        ],
+        [
+            "text" => "Movies",
+            "url" => "movie/show-all",
+            "title" => "Filmer",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Paginate",
+                        "url" => "movie/show-all-paginate",
+                        "title" => "Show movies paginated",
+                    ],
+                    [
+                        "text" => "Reset Database",
+                        "url" => "movie/reset",
+                        "title" => "Reset database.",
+                    ],
+                    [
+                        "text" => "Search for a title",
+                        "url" => "movie/search-title",
+                        "title" => "Search for a title.",
+                    ],
+                    [
+                        "text" => "Search by year",
+                        "url" => "movie/search-year",
+                        "title" => "Search for a movie by year.",
+                    ],
+                    [
+                        "text" => "Edit/Add/Delete",
+                        "url" => "movie/movie-select",
+                        "title" => "Select a movie.",
+                    ],
+                ],
+            ],
         ],
     ],
 ];

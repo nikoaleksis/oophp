@@ -1,3 +1,8 @@
+<?php
+namespace Anax\View;
+
+?>
+
 <div class="winner-page">
     <h1>Here are the final standings!<h1>
     <table>
