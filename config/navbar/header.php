@@ -46,8 +46,8 @@ return [
                         "title" => "Redovisning för kmom05.",
                     ],
                     [
-                        "text" => "Kmom02",
-                        "url" => "redovisning/kmom02",
+                        "text" => "Kmom06",
+                        "url" => "redovisning/kmom06",
                         "title" => "Redovisning för kmom06.",
                     ],
                 ],
@@ -118,6 +118,64 @@ return [
                         "text" => "Edit/Add/Delete",
                         "url" => "movie/movie-select",
                         "title" => "Select a movie.",
+                    ],
+                ],
+            ],
+        ],
+        [
+            "text" => "TextFilter",
+            "url" => "textfilter/bbcode",
+            "title" => "TextFilter",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "BBCODE/NL2BR",
+                        "url" => "textfilter/bbcode",
+                        "title" => "BBCODE/NL2BR",
+                    ],
+                    [
+                        "text" => "Clickable",
+                        "url" => "textfilter/clickable",
+                        "title" => "Clickable",
+                    ],
+                    [
+                        "text" => "Markdown",
+                        "url" => "textfilter/markdown",
+                        "title" => "Markdown",
+                    ],
+                ],
+            ],
+        ],
+        [
+            "text" => "Content",
+            "url" => "content/show-all",
+            "title" => "Content",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Show all",
+                        "url" => "content/show-all",
+                        "title" => "Show All",
+                    ],
+                    [
+                        "text" => "Admin",
+                        "url" => "content/admin",
+                        "title" => "Administrate",
+                    ],
+                    [
+                        "text" => "Create new content",
+                        "url" => "content/create",
+                        "title" => "Create New Content",
+                    ],
+                    [
+                        "text" => "Pages",
+                        "url" => "content/pages",
+                        "title" => "Pages",
+                    ],
+                    [
+                        "text" => "Posts",
+                        "url" => "content/posts",
+                        "title" => "Posts",
                     ],
                 ],
             ],
